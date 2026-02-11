@@ -80,7 +80,7 @@ BEGIN
 
     COMMIT;
 END;
-
+/
 
 
 CREATE OR REPLACE PROCEDURE sell_product (
@@ -109,7 +109,7 @@ BEGIN
 
     COMMIT;
 END;
-
+/
 
 
 BEGIN
@@ -117,21 +117,22 @@ BEGIN
     add_product(101, 'Laptop', 50000, 10, 1);
     add_product(102, 'Mouse', 500, 50, 1);
 END;
-
+/
 
 
 BEGIN
     update_stock(101, 5);
 END;
-
+/
 
 
 BEGIN
     sell_product(1, 101, 2);
 END;
-
+/
 
 SELECT * FROM suppliers;
 SELECT * FROM products;
 SELECT * FROM orders;
+
 
